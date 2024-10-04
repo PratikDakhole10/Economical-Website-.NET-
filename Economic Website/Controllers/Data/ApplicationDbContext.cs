@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Economic_Website.Models;
+using Microsoft.EntityFrameworkCore;
 namespace Economic_Website.Controllers.Data
 {
     public class ApplicationDbContext: DbContext
@@ -7,5 +8,7 @@ namespace Economic_Website.Controllers.Data
         {
                 
         }
+
+        public DbSet<Category> Categories { get; set; }
     }
 }
